@@ -10,22 +10,17 @@ int main(void){
     for(i=0;i<j;i++){
         printf("note %d:",i+1);
         scanf("%f",&T[i]);
-        
-    }
+        }
     S=0;
     for(i=0;i<=j;i++){
         S=S+T[i];
         moy=S/j;
-        
-    }
+         }
     moy=S/j;
-        
-    
     max=T[0];
     for(i=0;i<j;i++){
         if(max<T[i])
-        max=T[i];
-    }
+        max=T[i];}
     min=T[0];
     for(i=1;i<j;i++){
         if(min>T[i])
@@ -54,31 +49,23 @@ int main(void){
                 moy2=S/j;
                 printf("le moyenne: %.2f\n",moy2);
                 break;
-        case 2: do {printf("quelle note vous voulez suprimer?\n");
+        case 2: do {printf("quelle note vous voulez supprimer?\n");
                 scanf("%d",&pos);
                 }
                 while((pos<=0 || pos>j));
-                for (i=pos;i<j;i++)
+                for (i=pos-1;i<j;i++)
                 {
                 T[i]=T[i+1];
                 }
-                T[pos-1]=T[i];
                 j--;
                 S=0;
                 for(i=0;i<=j;i++){
                 S=S+T[i];
                 }
-                moy3=S/(j);
+                moy3=S/j;
                 printf("le moyenne: %.2f\n",moy3);
                 break;
                 }
-   
-
-    
-    
-    
-    
-
-    return 0;
+   return 0;
 
 }
